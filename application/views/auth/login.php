@@ -19,6 +19,9 @@
                                         <h1 class="h4 text-gray-900">Single Sign On</h1>
                                         <p> Plis login with email ugm</p>
                                     </div>
+
+                                    <?= $this->session->flashdata('message'); ?>
+
                                     <form class="user">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user"
