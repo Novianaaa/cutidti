@@ -5,13 +5,29 @@ class User  extends CI_Controller
 {
     public function index()
     {
-        $data['title'] = 'My Dashboard';
+        $data['title'] = 'Dashboard'; // <- ini kunci biar sidebar dashboard aktif
         $data['user'] = $this->db->get_where('user', [
             'email' => $this->session->userdata('email')
         ])->row_array();
 
-        // echo 'Selamat datang ' . $data['user']['name'];
-
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
         $this->load->view('user/index', $data);
+        $this->load->view('templates/footer');
+    }
+    public function profile()
+    {
+        $data['title'] = 'User';        // menu parent
+        $data['subtitle'] = 'Profile'; // menu child yang aktif
+        $data['user'] = $this->db->get_where('user', [
+            'email' => $this->session->userdata('email')
+        ])->row_array();
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar', $data);
+        $this->load->view('templates/topbar', $data);
+        $this->load->view('user/profile', $data);
+        $this->load->view('templates/footer');
     }
 }

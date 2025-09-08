@@ -42,12 +42,19 @@ class Auth  extends CI_Controller
                     // cek password
                     if (password_verify($password, $user['password'])) {
                         $data = [
-                            'email'  => $user['email'],
-                            'role_id' => $user['role_id']
+                            'email'   => $user['email'],
+                            'role_id' => $user['role_id']   // pakai role_id sesuai nama kolom tabel user
                         ];
 
                         $this->session->set_userdata($data);
-                        redirect('user');
+
+                        if ($user['role_id'] == 1) {
+                            redirect('admin');   // Admin
+                        } elseif ($user['role_id'] == 2) {
+                            redirect('manager'); // Kalau nanti ada halaman untuk Manager
+                        } else {
+                            redirect('user');    // Staff
+                        }
                     }
                 }
             } else {
