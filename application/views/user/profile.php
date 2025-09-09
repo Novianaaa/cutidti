@@ -17,7 +17,7 @@
                 <div class="col-md-9">
                     <div class="card shadow-sm">
                         <div class="card-body">
-                            <table class="table table-borderless mb-0">
+                            <table class="table table-borderless table-sm mb-0">
                                 <tr>
                                     <th width="200">Pegawai ID</th>
                                     <td>: 200200200200</td>
