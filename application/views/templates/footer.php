@@ -1,6 +1,6 @@
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
+            <footer class="sticky-footer bg-white mt-auto py-3">
+                <div class="container text-center">
                     <div class="copyright text-center my-auto">
                         <span>
                             <p style="margin: 0;">DTI Universitas Gadjah Mada <?= date('Y'); ?></p>
