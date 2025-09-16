@@ -58,7 +58,7 @@
                         <td>: (Gol. III/a-Penata Muda) TMT. 01-10-2023</td>
                     </tr>
                 </table>
-                <button class="btn btn-info btn-sm">Edit</button>
+                <a href="<?= base_url('admin/editprofile/'); ?>" class="btn btn-info btn-sm">Edit</a>
             </div>
         </div>
     </div>

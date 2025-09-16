@@ -2,15 +2,16 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $subtitle; ?> Cuti</h1>
     <div class="card shadow mb-4">
         <div class="card-body">
+
             <div class="table-responsive">
                 <table class="table table-bordered table-hover">
-                    <thead>
+                    <thead style="text-align: center;">
                         <tr>
-                            <th>No</th>
+                            <th style="width: 5%;">No</th>
                             <th>Nama</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Aksi</th>
+                            <th style="width: 10%;">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -19,11 +20,11 @@
                             <?php if (is_array($staff)) : ?>
                                 <?php foreach ($staff as $user) : ?>
                                     <tr>
-                                        <td><?= $no++; ?></td>
+                                        <td style="text-align: center;"><?= $no++; ?></td>
                                         <td><?= $user->name; ?></td>
                                         <td><?= $user->email; ?></td>
                                         <td><?= $user->role; ?></td>
-                                        <td>
+                                        <td style="text-align: center;">
                                             <a href="<?= base_url('admin/detailstaff/' . $user->id_user); ?>" class="btn btn-info btn-sm">
                                                 <i class="fa fa-user"></i> Detail
                                             </a>
