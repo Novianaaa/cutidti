@@ -10,6 +10,9 @@ class User  extends CI_Controller
             'email' => $this->session->userdata('email')
         ])->row_array();
 
+        $this->load->model('User_model');
+        $data['users'] = $this->User_model->getAllUsers();
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
