@@ -58,6 +58,14 @@ class Admin extends CI_Controller
     //Datail Data Staff
     public function detailStaff($id)
     {
+        // Form Pencarian 
+        $keyword = $this->input->get('keyword');
+
+        if ($keyword) {
+            $data['staff'] = $this->User_model->searchStaff($keyword);
+        } else {
+            $data['staff'] = $this->User_model->getAllUsers();
+        }
         // Cek apakah user login
         $data['title'] = 'User';
         $data['subtitle'] = 'Data Staff';
