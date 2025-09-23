@@ -12,26 +12,26 @@
                         <input type="date" name="tanggal_input" class="form-control" value="<?= date('Y-m-d') ?>" readonly>
                     </div>
                     <div class="col-md-3">
-                        <label>No Induk Karyawan :</label>
+                        <label>Nama :</label>
                         <input type="text" name="no_induk" class="form-control" value="////" readonly>
                     </div>
                     <div class="col-md-3">
-                        <label>Nama Lengkap :</label>
+                        <label>NIU :</label>
                         <input type="text" name="nama" class="form-control" value="///" readonly>
                     </div>
                     <div class="col-md-3">
-                        <label>Keterangan :</label>
+                        <label>Alasan Cuti</label>
                         <input type="text" name="keterangan" class="form-control" placeholder="cth: acara keluarga">
                     </div>
                 </div>
 
                 <div class="row mb-3">
                     <div class="col-md-3">
-                        <label>Bagian / Departemen :</label>
+                        <label>Jabatan :</label>
                         <input type="text" name="departemen" class="form-control" value="///" readonly>
                     </div>
                     <div class="col-md-3">
-                        <label>Jabatan :</label>
+                        <label>Pangkat / Gol :</label>
                         <input type="text" name="jabatan" class="form-control" value="///" readonly>
                     </div>
                     <div class="col-md-3">
@@ -78,7 +78,10 @@
                                 style="appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 30px; line-height: 1.5; height: calc(2.25rem + 2px);">
                                 <option value="Cuti Tahunan">Cuti Tahunan</option>
                                 <option value="Cuti Sakit">Cuti Sakit</option>
+                                <option value="Cuti Sakit">Cuti Alasan Penting</option>
+                                <option value="Cuti Sakit">Cuti Besar</option>
                                 <option value="Cuti Melahirkan">Cuti Melahirkan</option>
+                                <option value="Cuti Melahirkan">Cuti di Luar Tanggungan Negara</option>
                             </select>
                             <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #6c757d;">
                                 <i class="fa fa-angle-down"></i>

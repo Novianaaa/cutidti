@@ -65,4 +65,15 @@ class Cuti extends CI_Controller
         $this->load->view('cuti/riwayat', $data);
         $this->load->view('templates/footer');
     }
+    public function form()
+    {
+        $this->load->view('pengajuan');
+    }
+    public function simpan()
+    {
+        // Tidak ada penyimpanan ke database
+        // Hanya redirect dengan pesan sukses
+        $this->session->set_flashdata('success', 'Data cuti berhasil disimpan!');
+        redirect('cuti/riwayat');
+    }
 }
