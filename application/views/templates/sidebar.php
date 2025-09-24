@@ -1,3 +1,20 @@
+<style>
+    .sidebar .nav-link {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar .nav-link i {
+        font-size: 1rem;
+        width: 20px;
+        /* biar semua icon punya lebar sama */
+        text-align: center;
+        /* icon rata tengah */
+        margin-right: 8px;
+        /* jarak icon ke text */
+    }
+</style>
+
 <!-- Sidebar -->
 <ul class="navbar-nav sidebar sidebar-dark accordion"
     id="accordionSidebar"
@@ -32,58 +49,56 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item <?= ($title == 'Cuti') ? 'active' : ''; ?>">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-calendar-check"></i>
-            <span>Cuti</span>
-        </a>
-        <div id="collapseTwo" class="collapse <?= ($title == 'Cuti') ? 'show' : ''; ?>" aria-labelledby="headingTwo"
-            data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Pengajuan') ? 'active' : ''; ?>" href="<?= base_url('cuti/pengajuan'); ?>">Pengajuan</a>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Approval') ? 'active' : ''; ?>" href="<?= base_url('cuti/approval'); ?>">Approval</a>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Riwayat') ? 'active' : ''; ?>" href="<?= base_url('cuti/riwayat'); ?>">Riwayat</a>
-            </div>
-        </div>
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Pengajuan') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('cuti/pengajuan'); ?>">
+            <i class="fas fa-calendar-plus"></i>
+            <span>Pengajuan</span></a>
     </li>
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Riwayat') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('cuti/riwayat'); ?>">
+            <i class="fas fa-calendar-alt"></i>
+            <span>Riwayat</span></a>
+    </li>
+    <!-- <div id="collapseTwo" class="collapse <?= ($title == 'Cuti') ? 'show' : ''; ?>" aria-labelledby="headingTwo"
+        data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Pengajuan') ? 'active' : ''; ?>" href="<?= base_url('cuti/pengajuan'); ?>">Pengajuan</a>
+            <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Approval') ? 'active' : ''; ?>" href="<?= base_url('cuti/approval'); ?>">Approval</a>
+            <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Riwayat') ? 'active' : ''; ?>" href="<?= base_url('cuti/riwayat'); ?>">Riwayat</a>
+        </div>
+    </div> -->
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Data User
+        Admin
     </div>
-
-    <!-- Nav Item - User -->
-    <li class="nav-item <?= ($title == 'User') ? 'active' : ''; ?>">
-        <a class="nav-link <?= ($title == 'User') ? '' : 'collapsed'; ?>"
-            href="#" data-toggle="collapse" data-target="#collapsePages"
-            aria-expanded="<?= ($title == 'User') ? 'true' : 'false'; ?>"
-            aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>User</span>
-        </a>
-        <div id="collapsePages" class="collapse <?= ($title == 'User') ? 'show' : ''; ?>"
-            aria-labelledby="headingPages" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">User Profile</h6>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Profile') ? 'active' : ''; ?>"
-                    href="<?= base_url('user/profile'); ?>">Profile</a>
-
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Admin Pages</h6>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Data Staff') ? 'active' : ''; ?>"
-                    href="<?= base_url('admin/datastaff'); ?>">Data Staff</a>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Data Cuti') ? 'active' : ''; ?>"
-                    href="<?= base_url('admin/datacuti'); ?>">Data Cuti</a>
-                <a class="collapse-item <?= (isset($subtitle) && $subtitle == 'Laporan') ? 'active' : ''; ?>"
-                    href="<?= base_url('admin/laporan'); ?>">Laporan</a>
-            </div>
-        </div>
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Approval') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('cuti/approval'); ?>">
+            <i class="fas fa-calendar-check"></i>
+            <span>Approval</span></a>
     </li>
-
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Data Staff') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('admin/datastaff'); ?>">
+            <i class="fas fa-users"></i>
+            <span>Data Staff</span></a>
+    </li>
+    </li>
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Data Cuti') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('admin/datacuti'); ?>">
+            <i class="fas fa-calendar-week"></i>
+            <span>Data Cuti</span></a>
+    </li>
+    <li class="nav-item <?= (isset($subtitle) && $subtitle == 'Laporan') ? 'active' : ''; ?>">
+        <a class="nav-link" href="<?= base_url('admin/laporan'); ?>">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Laporan</span></a>
+    </li>
+    <!-- Divider -->
+    <hr class="sidebar-divider">
 
     <!-- Nav Item - Logout -->
     <li class="nav-item">
