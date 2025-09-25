@@ -89,7 +89,11 @@
                             </span>
                         </div>
                     </div>
+                </div>
+                <div class="form-group">
 
+                    <label>Foto User</label><br>
+                    <input type="file" class="form-control-file" name="foto">
                 </div>
 
                 <div class="d-flex justify-content-end">

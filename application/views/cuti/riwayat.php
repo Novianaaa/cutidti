@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <h1 class="h3 mb-4 text-gray-800"><?= $subtitle; ?> Cuti</h1>
+
     <div class="container mt-4">
         <?php if ($this->session->flashdata('success')): ?>
             <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -10,6 +11,7 @@
             </div>
         <?php endif; ?>
     </div>
+
     <div class="card shadow mb-4">
         <div class="card-header py-3 d-flex justify-content-between align-items-center">
 
@@ -44,22 +46,31 @@
                             <?php foreach ($staff as $user) : ?>
                                 <tr>
                                     <td style="text-align: center;"><?= $no++; ?></td>
-                                    <td>Tanggal Pengajuan</td>
-                                    <td>Tanggal Mulai Cuti</td>
-                                    <td>Tanggal Selesai Cuti</td>
-                                    <td>Tanggal Masuk</td>
-                                    <td>Keterangan Cuti</td>
-                                    <td>Status</td>
+                                    <td><?= $user->tanggal_pengajuan; ?></td>
+                                    <td><?= $user->tanggal_mulai; ?></td>
+                                    <td><?= $user->tanggal_selesai; ?></td>
+                                    <td><?= $user->tanggal_masuk; ?></td>
+                                    <td><?= $user->keterangan; ?></td>
                                     <td style="text-align: center;">
-                                        <a href="<?= base_url('admin/detailstaff/' . $user->id_user); ?>" class="btn btn-info btn-sm">
-                                            <i class="fas fa-user"></i> Detail
+                                        <?php if ($user->status == 'Disetujui'): ?>
+                                            <span class="badge bg-success"><?= $user->status; ?></span>
+                                        <?php elseif ($user->status == 'Ditolak'): ?>
+                                            <span class="badge bg-danger"><?= $user->status; ?></span>
+                                        <?php else: ?>
+                                            <span class="badge bg-warning text-dark"><?= $user->status; ?></span>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <a href="<?= base_url('cuti/detail/' . $user->id_cuti); ?>"
+                                            class="btn btn-info btn-sm">
+                                            <i class="fas fa-eye"></i> Detail
                                         </a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
                         <?php else : ?>
                             <tr>
-                                <td colspan="8" class="text-center">Tidak ada data user</td>
+                                <td colspan="8" class="text-center">Tidak ada data riwayat cuti</td>
                             </tr>
                         <?php endif; ?>
                     </tbody>
