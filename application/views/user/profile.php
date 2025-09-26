@@ -26,11 +26,11 @@
                         <td>: novianasmrt@ugm.ac.id</td>
                     </tr>
                     <tr>
-                        <th>Phone</th>
+                        <th>Nomor Telepon</th>
                         <td>: 085877180502</td>
                     </tr>
                     <tr>
-                        <th>Kode Resmi (NIP/NIKA/NIU/NPU)</th>
+                        <th>Kode Resmi NIU</th>
                         <td>: 196907142007012001</td>
                     </tr>
                     <tr>
@@ -46,12 +46,16 @@
                         <td>: Non PNS</td>
                     </tr>
                     <tr>
-                        <th>Jenis SK Pegawai</th>
+                        <th>SK Pegawai</th>
                         <td>: SK UGM</td>
                     </tr>
                     <tr>
                         <th>Unit Kerja</th>
                         <td>: Direktorat Teknologi Informasi</td>
+                    </tr>
+                    <tr>
+                        <th>Jabatan</th>
+                        <td>: Staff</td>
                     </tr>
                     <tr>
                         <th>Pangkat/Golongan/TMT. Terakhir</th>

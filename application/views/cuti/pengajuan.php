@@ -92,7 +92,7 @@
                 </div>
                 <div class="form-group">
 
-                    <label>Foto User</label><br>
+                    <label>Lampiran (optional)</label><br>
                     <input type="file" class="form-control-file" name="foto">
                 </div>
 
